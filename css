@@ -1,0 +1,87 @@
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --accent:#4fd1c5;
+  --muted:#9aa6b2;
+  --glass: rgba(255,255,255,0.03);
+  --radius:12px;
+}
+*{box-sizing:border-box;font-family:Inter,Segoe UI,Roboto,"Helvetica Neue",Arial;}
+body{
+  margin:0;
+  background: linear-gradient(180deg,#071020 0%, #08111a 100%);
+  color:#e6eef6;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:32px;
+}
+.container{
+  width:100%;
+  max-width:980px;
+}
+.hero{
+  background:var(--glass);
+  border-radius:var(--radius);
+  padding:28px;
+  box-shadow: 0 6px 30px rgba(2,6,23,0.6);
+  margin-bottom:20px;
+}
+h1{margin:0 0 6px;font-size:28px}
+.lead{margin:0;color:var(--muted)}
+.actions{margin-top:14px}
+.btn{
+  display:inline-block;
+  padding:10px 16px;
+  background:transparent;
+  color:var(--accent);
+  border:1px solid rgba(79,209,197,0.15);
+  border-radius:10px;
+  text-decoration:none;
+  cursor:pointer;
+}
+.btn.primary{
+  background:linear-gradient(90deg,var(--accent),#2dd4bf);
+  color:#042027;
+  border:none;
+  box-shadow: 0 6px 18px rgba(47,128,128,0.12);
+}
+.scanner{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  padding:20px;
+  border-radius:12px;
+}
+textarea#code{
+  width:100%;
+  min-height:320px;
+  background:#06101a;
+  border:1px solid rgba(255,255,255,0.03);
+  color:#d9f6f0;
+  padding:12px;
+  border-radius:8px;
+  font-family: "Courier New", monospace;
+  font-size:13px;
+  resize:vertical;
+}
+.row{margin-top:12px;display:flex;gap:8px}
+.result{margin-top:18px;background:#06121a;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.02)}
+.hidden{display:none}
+.log .issue{
+  background: rgba(255,255,255,0.02);
+  border-left:4px solid rgba(255,80,80,0.9);
+  padding:12px;margin-bottom:10px;border-radius:6px;
+}
+.log .ok{
+  background: rgba(79,209,197,0.06);
+  border-left:4px solid rgba(79,209,197,0.9);
+  padding:12px;margin-bottom:10px;border-radius:6px;
+}
+.snippet{
+  font-family: monospace;
+  font-size:12px;
+  background:#021018;
+  padding:10px;border-radius:6px;margin-top:8px;white-space:pre-wrap;overflow:auto;
+  border:1px solid rgba(255,255,255,0.02);
+}
+footer{margin-top:12px;color:var(--muted);font-size:13px}
