@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Solidity Quick Scanner -- Demo</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <h1>Solidity Quick Scanner</h1>
+      <p class="lead">Quick heuristic check for three basic vulnerabilities: reentrancy, integer overflow, unchecked calls. It does not replace a full-fledged audit.</p>
+      <div class="actions">
+        <a href="#scanner" id="open-scanner" class="btn">Check my code</a>
+      </div>
+    </section>
+
+    <section id="scanner" class="scanner">
+      <h2> Insert the contract code </h2>
+      <textarea id="code" placeholder= "// paste your solidity code here..."></textarea>
+      <div class="row">
+        <button id="run" class="btn primary"> Start checking </button>
+        <button id="paste-example" class="btn">Insert an example</button>
+      </div>
+
+      <div id="result" class="result hidden">
+        <h3>Scanning result</h3>
+        <div id="log" class="log"></div>
+      </div>
+    </section>
+
+    <footer>
+      <small>The tool uses simple heuristics - for a real audit, use Slither / Mythril / manual audit.</small>
+    </footer>
+  </main>
+
+  <script src="/static/main.js"></script>
+</body>
+</html>
